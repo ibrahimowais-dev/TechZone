@@ -1,0 +1,281 @@
+/* ===================================================
+   CHECKOUT MODAL (LIGHT MODE / DEFAULT)
+   =================================================== */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.checkoutCard {
+    background: #ffffff;
+    color: #212529;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border: 1px solid #dee2e6;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    background: transparent;
+    border: none;
+    color: #6c757d;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.closeBtn:hover {
+    color: #dc3545 !important;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.section {
+    background: #f8f9fa;
+    padding: 1.2rem;
+    border-radius: 12px;
+    margin-bottom: 1.2rem;
+    border: 1px solid #e9ecef;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.section h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #6366f1;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 0.8rem;
+    width: 100%;
+}
+
+.inputGroup label {
+    font-size: 0.85rem;
+    color: #495057;
+}
+
+.inputGroup input {
+    background: #ffffff;
+    border: 1px solid #ced4da;
+    color: #212529;
+    padding: 0.65rem 0.8rem;
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.9rem;
+    transition: border-color 0.2s, background-color 0.3s ease, color 0.3s ease;
+}
+
+.inputGroup input:focus {
+    border-color: #6366f1;
+}
+
+.row {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.paymentOptions {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.radioCard {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #ced4da;
+    padding: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #212529;
+    transition: all 0.2s;
+}
+
+.radioCard.active {
+    border-color: #6366f1;
+    background: rgba(99, 102, 241, 0.08);
+}
+
+.radioCard input {
+    accent-color: #6366f1;
+}
+
+.cardDetails {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+
+.totalPrice span {
+    display: block;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.totalPrice strong {
+    font-size: 1.4rem;
+    color: #16a34a;
+}
+
+.submitBtn {
+    background: #6366f1;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.6rem;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+}
+
+.submitBtn:hover {
+    background: #4f46e5;
+}
+
+/* ===================================================
+   DARK MODE OVERRIDES (html[data-bs-theme="dark"])
+   =================================================== */
+
+:global(html[data-bs-theme="dark"]) .overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+:global(html[data-bs-theme="dark"]) .checkoutCard {
+    background: #1e1e24;
+    color: #ffffff;
+    border-color: #333333;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+:global(html[data-bs-theme="dark"]) .closeBtn {
+    color: #aaa;
+}
+
+:global(html[data-bs-theme="dark"]) .closeBtn:hover {
+    color: #ef4444 !important;
+}
+
+:global(html[data-bs-theme="dark"]) .section {
+    background: #282830;
+    border-color: transparent;
+}
+
+:global(html[data-bs-theme="dark"]) .inputGroup label {
+    color: #ccc;
+}
+
+:global(html[data-bs-theme="dark"]) .inputGroup input {
+    background: #18181b;
+    border-color: #3f3f46;
+    color: #ffffff;
+}
+
+:global(html[data-bs-theme="dark"]) .radioCard {
+    background: #18181b;
+    border-color: #3f3f46;
+    color: #ffffff;
+}
+
+:global(html[data-bs-theme="dark"]) .radioCard.active {
+    background: rgba(99, 102, 241, 0.15);
+    border-color: #6366f1;
+}
+
+:global(html[data-bs-theme="dark"]) .cardDetails {
+    border-top-color: #3f3f46;
+}
+
+:global(html[data-bs-theme="dark"]) .totalPrice span {
+    color: #aaa;
+}
+
+:global(html[data-bs-theme="dark"]) .totalPrice strong {
+    color: #22c55e;
+}
+
+/* ===================================================
+   RESPONSIVE MEDIA QUERIES
+   =================================================== */
+
+@media (max-width: 576px) {
+    .overlay {
+        padding: 0.5rem;
+    }
+
+    .checkoutCard {
+        padding: 1.25rem 1rem;
+        max-height: 95vh;
+        border-radius: 12px;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .paymentOptions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .section {
+        padding: 1rem 0.8rem;
+    }
+
+    .title {
+        font-size: 1.25rem;
+        margin-top: 0.5rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+        text-align: center;
+    }
+
+    .submitBtn {
+        width: 100%;
+        padding: 0.85rem;
+    }
+}
