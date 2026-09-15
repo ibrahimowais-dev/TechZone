@@ -14,8 +14,7 @@ export default function ProdDetailsShop() {
 
     useEffect(() => {
         setLoading(true);
-        // 1. التعديل هنا: استخدام سيرفر المشروع المحلي بدل الـ FakeStoreAPI
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://my-json-api-2dca.onrender.com/products/${id}`)
             .then((res) => {
                 if (!res.ok) throw new Error('Product not found');
                 return res.json();
@@ -73,7 +72,6 @@ export default function ProdDetailsShop() {
                 <div className="row g-5 align-items-center">
                     <div className="col-12 col-md-5 text-center">
                         <div className="p-0 border rounded-3 bg-body-tertiary shadow-sm overflow-hidden">
-                            {/* 2. التعديل هنا: تغيير product.image إلى product.thumbnail */}
                             <img
                                 src={product.thumbnail}
                                 alt={product.title}
