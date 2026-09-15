@@ -17,7 +17,7 @@ const FilterContent = ({
 }) => (
     <div className="card border-0 p-1 bg-body">
         <div className="d-flex justify-content-between align-items-center mb-3">
-            <h5 className="fw-bold mb-0">⚙️ Filters</h5>
+            <h5 className="fw-bold mb-0">Filters</h5>
             <button 
                 onClick={handleResetFilters} 
                 className="btn btn-sm btn-link text-decoration-none p-0 text-danger"
@@ -181,7 +181,7 @@ export default function Shop() {
                     <div className="row g-2 align-items-center">
                         <div className="col-12 col-md-4">
                             <h2 className="fw-bold fs-4 mb-0 text-center text-md-start">
-                                🛒 Shop Products
+                                Shop Products
                             </h2>
                         </div>
                         
@@ -204,7 +204,7 @@ export default function Shop() {
                                     data-bs-toggle="offcanvas" 
                                     data-bs-target="#filterOffcanvas"
                                 >
-                                    ⚙️ Filters
+                                    Filters
                                 </button>
                             </div>
                         </div>
